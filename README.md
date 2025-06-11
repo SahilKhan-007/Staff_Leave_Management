@@ -59,22 +59,12 @@ Make sure the following are installed on your system:
 - **Django**  
   Install using pip if not already installed:
 
-  ```bash
-  pip install django
 ### 🧰 SQLiteStudio (Optional)
 
 A GUI tool to view or manage the SQLite database:  
 🔗 [https://sqlitestudio.pl/](https://sqlitestudio.pl/)
 
----
 
-### 📥 Get the Code
-
-Clone the repository or download it as a ZIP:
-
-  ```bash
-  git clone https://github.com/SahilKhan-007/Staff_Leave_Management.git
-  ```
 ## Database Setup
 
 The system uses **SQLite**. Check if a `db.sqlite3` file already exists inside `staffleave/slms/`.
@@ -85,26 +75,53 @@ The system uses **SQLite**. Check if a `db.sqlite3` file already exists inside `
 - ❌ **If not provided**:  
   Create the database tables using Django migrations:
 
-  ```bash
-  python manage.py migrate
-  ```
-## How to Run the Staff Leave Management System (Django + Python)
+    ```bash
+    python manage.py migrate
+    ```
+## 🚀 How to Run the Staff Leave Management System (Django + Python)
 
-1. **Download the ZIP file**
-2. **Extract the file**, copy the `staffleave` folder and paste it on the **Desktop**.
-3. **Open VSCode** and click on the **Terminal**.
-4. Navigate to the project directory using the `cd` command:
+### 📥 Get the Code
 
-   ```bash
-   cd Staff_Leave_Management/staffleave/slms
-   ```
+1. Clone the repository using Git, or download it as a ZIP:
 
-5. Run the Django development server:
- ```bash
-python manage.py runserver
- ```
-6. After running the above command, you will see output indicating that the server is running.
+    ```bash
+    git clone https://github.com/SahilKhan-007/Staff_Leave_Management.git
+    ```
+2. **Extract the file**, then copy the `staffleave` folder and paste it on your **Desktop**.
 
-7. Open your browser and go to: 
-  http://127.0.0.1:8000
+3. **Open VSCode** and open the **Terminal**.
+
+4. **Install Dependencies**
+    Before running the project, install the required Python packages listed in the `requirements.txt` file:
+    ```bash
+    pip install -r requirements.txt
+    ```
+5. Navigate to the project directory using the `cd` command:
+   
+    ```bash
+    cd Staff_Leave_Management/staffleave/slms
+    ```
+
+7. Run the Django development server:
+   
+    ```bash
+    python manage.py runserver
+    ```
+8. After running the above command, you will see output indicating that the server is running.
+
+9. Open your browser and go to: 
+    http://127.0.0.1:8000
 The project will now be running.
+
+
+Notes
+If you modify models, remember to run:
+    
+  ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+  ```
+To create a superuser for the Django admin panel:
+  ```bash
+    python manage.py createsuperuser
+  ```
