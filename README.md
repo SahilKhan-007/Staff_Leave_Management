@@ -74,7 +74,6 @@ Clone the repository or download it as a ZIP:
 
   ```bash
   git clone https://github.com/SahilKhan-007/Staff_Leave_Management.git
-  cd Staff_Leave_Management/staffleave
   ```
 ## Database Setup
 
