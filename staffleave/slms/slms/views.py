@@ -91,7 +91,7 @@ def CHANGE_PASSWORD(request):
      
      if len(ch)>0:
             data = User.objects.get(id = request.user.id)
-            context["data"]:data            
+            context["data"]:data             # type: ignore
      if request.method == "POST":        
         current = request.POST["cpwd"]
         new_pas = request.POST['npwd']
